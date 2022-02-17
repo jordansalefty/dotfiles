@@ -1,0 +1,35 @@
+[user]
+	name = Jordan Cochran
+	email = cochran.jandrew@gmail.com
+
+[color]
+	branch = auto
+	diff = auto
+	status = auto
+
+[color "branch"]
+	current = red reverse
+	local = blue
+	remote = green
+
+[color "diff"]
+	meta = yellow
+	frag = magenta
+	old = red bold
+	new = green
+	plain = white
+
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+
+[alias]
+	st = status -s
+	cl = clone
+	ci = commit
+	cm = commit -m
+	co = checkout
+	r = reset
+	cp = cherry-pic
+	gr = grep -Ii

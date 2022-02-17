@@ -1,0 +1,78 @@
+### Variables
+
+include ~/.config/sway/colors
+
+# Logo key. Use Mod1 for Alt.
+set $mod Mod4
+# Home row direction keys, like vim
+set $left  h
+set $down  j
+set $up    k
+set $right l
+
+set $term foot
+set $browser firefox
+
+set $font 'Fira Code NF-13'
+
+set $launcher dmenu -p ' '              \
+                    -i                   \
+                    -l 10                \
+                    -fn $font            \
+                    -nb '#'$background   \
+                    -nf '#'$foreground   \
+                    -sb '#'$yellow       \
+                    -sf '#'$background
+
+set $menu dmenu_path | $launcher | xargs swaymsg exec --
+
+### Output configuration
+#
+# Wallpaper
+output * bg ~/.config/sway/wallpaper fill
+
+# Gaps
+gaps inner 10
+gaps outer 5
+
+# Borders
+default_border pixel 10
+default_floating_border pixel
+
+smart_borders on
+hide_edge_borders both
+
+# Fonts
+font $font
+
+# class                  border      background  text    indicator child_border
+client.focused           $background $background $white  $red      $yellow
+#client.focused_inactive #333333     #5f676a     #ffffff #484e50   #5f676a
+client.unfocused         $background $background $white  $red      $background
+#client.urgent           #2f343a     #900000     #ffffff #900000   #900000
+
+### Input configuration
+#
+# Disable touchpad while mouse is available
+input "2:7:SynPS/2_Synaptics_TouchPad" {
+    events disabled_on_external_mouse
+    dwt enabled
+    tap enabled
+    natural_scroll enabled
+    middle_emulation enabled
+}
+
+assign [app_id="firefox"] 2
+assign [app_id="rhythmbox"] 3
+
+# Startup programs
+exec $term
+exec $browser
+exec rhythmbox
+
+bar {
+    swaybar_command waybar
+}
+
+include /etc/sway/config.d/*
+include ~/.config/sway/keybindings

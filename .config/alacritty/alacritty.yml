@@ -1,0 +1,42 @@
+import:
+  - ~/.config/alacritty/themes/tokyo-night-storm.yaml
+
+window:
+  # Window padding (changes require restart)
+  padding:
+    x: 11
+    y: 11
+
+  # Spread additional padding evenly around the terminal content.
+  dynamic_padding: true
+
+  # Window title
+  title: Alacritty
+
+  # Allow terminal applications to change Alacritty's window title.
+  dynamic_title: true
+
+  #opacity: 0.9
+
+scrolling:
+  # Maximum number of lines in the scrollback buffer.
+  # Specifying '0' will disable scrolling.
+  history: 10000
+
+  # Scrolling distance multiplier.
+  multiplier: 3
+
+# Font configuration
+font:
+  normal:
+    family: Firacode Nerd Font
+
+  # Point size
+  size: 14.0
+
+# Live config reload (changes require restart)
+live_config_reload: true
+
+# Startup directory
+working_directory: ~
+

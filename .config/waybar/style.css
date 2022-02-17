@@ -1,0 +1,97 @@
+* {
+    border: none;
+    border-radius: 0;
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: Firacode NF, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: rgba(36, 40, 59, 0.7);
+    color: #bec4e8;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+window#waybar.empty {
+    background-color: #24283b;
+}
+
+/* window#waybar.firefox {} */
+
+#workspaces button {
+    padding: 0 40px;
+    background-color: transparent;
+    color: #bec4e8;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+#workspaces button:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+#workspaces button.focused {
+    background-color: #24283b;
+}
+
+#workspaces button.urgent {
+    background-color: #eb4d4b;
+}
+
+#mode {
+    padding: 0 10px;
+    color: #24283b;
+    background-color: #ff7a93;
+}
+
+#custom-clock,
+#temperature,
+#pulseaudio {
+    padding: 0 20px;
+    margin: 5px 4px;
+    border-radius: 15px;
+    color: #bec4e8;
+}
+
+#window,
+#workspaces {
+    margin: 0 10px;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+label:focus {
+    background-color: #000000;
+}
+
+#custom-clock {
+  padding: 00 15px 0 15px;
+}
+
+#temperature {
+    background-color: #f7768e;
+    color: #24283b;
+}
+
+#pulseaudio {
+    background-color: #7aa2f7;
+    color: #24283b;
+}
+
+#pulseaudio.muted {
+    background-color: #90b1b1;
+    color: #2a5c45;
+}

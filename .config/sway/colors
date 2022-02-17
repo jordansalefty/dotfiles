@@ -1,0 +1,14 @@
+# Colors (Tokyo Night: Storm variant)
+set $background '24283b' 
+set $foreground 'a9b1d6' 
+
+set $black   '444b6a'
+set $red     'ff7a93'
+set $green   'b9f27c'
+set $yellow  'ff9e64'
+set $blue    '7da6ff'
+set $magenta 'bb9af7'
+set $cyan    '0db9d7'
+set $white   'acb0d0'
+
+# vim: set ft=swayconfig:
